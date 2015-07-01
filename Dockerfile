@@ -21,7 +21,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
       build-essential \
-      ruby1.9.1
+      ruby1.9.1 \
       ruby1.9.1-dev
 
 # get phpunit (http://phpunit.de/)
