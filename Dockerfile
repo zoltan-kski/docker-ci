@@ -21,6 +21,14 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
       build-essential \
+      libssl-dev \
+      libsasl2-dev \
+      libmysqlclient-dev \
+      libldap2-dev \
+      python \
+      python-pip \
+      python-dev \
+      python-setuptools \
       ruby1.9.1 \
       ruby1.9.1-dev
 
@@ -45,6 +53,9 @@ RUN npm install -g grunt-cli
 
 # get jekyll (http://jekyllrb.com/)
 RUN gem install jekyll
+
+# pip (https://pypi.python.org/pypi/pip)
+RUN pip install --upgrade pip
 
 # clean
 RUN find /var/cache/apt -type f -delete && \
