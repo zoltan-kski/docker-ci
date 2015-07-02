@@ -34,7 +34,7 @@ version is 5.4 from [Dotdeb](https://www.dotdeb.org/).
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/phpcs \
+	 rentabiliweb/ci \
 	 bash -c 'php-choose-version 5.5 && cd /path/to/bind/in/container && PHPUNIT STAFF'
 ```
 
@@ -44,7 +44,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/phpcs \
+	 rentabiliweb/ci \
 	 bash -c 'cd /path/to/bind/in/container && NODE.JS STUFF'
 ```
 
@@ -54,7 +54,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/phpcs \
+	 rentabiliweb/ci \
 	 bash -c 'cd /path/to/bind/in/container && NPM STUFF'
 ```
 
@@ -64,7 +64,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/phpcs \
+	 rentabiliweb/ci \
 	 bash -c 'cd /path/to/bind/in/container && BOWER STUFF'
 ```
 
@@ -74,7 +74,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/phpcs \
+	 rentabiliweb/ci \
 	 bash -c 'cd /path/to/bind/in/container && GRUNT STUFF'
 ```
 
