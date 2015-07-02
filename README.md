@@ -35,7 +35,7 @@ $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
 	 rentabiliweb/ci \
-	 bash -c 'php-choose-version 5.5 && cd /path/to/bind/in/container && PHPUNIT STAFF'
+	 bash -c 'php-choose-version 5.5 && cd /path/to/bind/in/container && PHPUNIT STUFF'
 ```
 
 ### Run node.js
