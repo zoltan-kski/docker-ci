@@ -1,6 +1,6 @@
 "":
   script:
-  - bash -c 'OK'
+  - bash -c 'echo OK'
   tags:
   except:
   - tags
