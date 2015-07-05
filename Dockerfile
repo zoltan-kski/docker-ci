@@ -22,10 +22,10 @@ RUN apt-get update && \
     apt-get install -y \
       build-essential \
       libgraphviz-dev \
+      libldap2-dev \
+      libmysqlclient-dev \
       libssl-dev \
       libsasl2-dev \
-      libmysqlclient-dev \
-      libldap2-dev \
       pkg-config \
       python \
       python-pip \
