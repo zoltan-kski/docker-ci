@@ -31,6 +31,7 @@ RUN apt-get update && \
       python-pip \
       python-dev \
       python-setuptools \
+      python-virtualenv \
       ruby1.9.1 \
       ruby1.9.1-dev
 
