@@ -21,6 +21,7 @@ This images embed :
 - npm (http://www.npmjs.com/)
 - bower (http://bower.io/)
 - grunt (http://gruntjs.com/)
+- gulp (http://gulpjs.com/)
 - jekyll (http://jekyllrb.com/)
 
 ## Usage
@@ -76,6 +77,16 @@ $ docker run \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
 	 rentabiliweb/ci \
 	 bash -c 'cd /path/to/bind/in/container && GRUNT STUFF'
+```
+
+### Run gulp
+
+```bash
+$ docker run \
+  	 --rm \
+  	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
+	 rentabiliweb/ci \
+	 bash -c 'cd /path/to/bind/in/container && GULP STUFF'
 ```
 
 ## Development

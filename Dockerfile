@@ -54,6 +54,9 @@ RUN npm install -g bower
 # get grunt (http://gruntjs.com/)
 RUN npm install -g grunt-cli
 
+# get gulp (http://gulpjs.com/)
+RUN npm install -g gulp
+
 # get jekyll (http://jekyllrb.com/)
 RUN gem install jekyll
 
