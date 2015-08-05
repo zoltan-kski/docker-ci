@@ -1,6 +1,6 @@
 # docker-ci
 
-[![Build Status](https://travis-ci.org/rentabiliweb/docker-ci.svg?branch=master)](https://travis-ci.org/rentabiliweb/docker-ci)
+![License badge][license-img] [![Travis badge][travis-img]][travis-url] [![Circle badge][circle-img]][circle-url] [![Docker badge][docker-img]][docker-url]
 
 #### Table of Contents
 
@@ -92,3 +92,21 @@ $ docker run \
 ## Development
 
 Feel free to contribute on GitHub.
+
+```
+    ╚⊙ ⊙╝
+  ╚═(███)═╝
+ ╚═(███)═╝
+╚═(███)═╝
+ ╚═(███)═╝
+  ╚═(███)═╝
+   ╚═(███)═╝
+```
+
+[license-img]: https://img.shields.io/badge/licence-ISC-blue.svg "Licence"
+[travis-img]: https://img.shields.io/travis/rentabiliweb/docker-ci.svg "Travis CI"
+[travis-url]: https://travis-ci.org/rentabiliweb/docker-ci "Travis CI"
+[circle-img]: https://img.shields.io/circleci/project/rentabiliweb/docker-ci.svg "Circle CI"
+[circle-url]: https://circleci.com/gh/rentabiliweb/docker-ci "Circle CI"
+[docker-img]: https://img.shields.io/docker/pulls/rentabiliweb/ci.svg "Docker Hub"
+[docker-url]: https://registry.hub.docker.com/u/rentabiliweb/ci "Docker Hub"
