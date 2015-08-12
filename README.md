@@ -2,6 +2,8 @@
 
 ## Overview
 
+Docker image for Continuous Integration (eg: with GitLab CI)
+
 ## Description
 
 This images embed :
@@ -95,5 +97,5 @@ Feel free to contribute on GitHub.
 ```
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg "License"
-[docker-img]: https://img.shields.io/docker/pulls/rentabiliweb/ci.svg "Docker Hub"
-[docker-url]: https://registry.hub.docker.com/u/rentabiliweb/ci "Docker Hub"
+[docker-img]: https://img.shields.io/docker/pulls/rentabiliweb/ci.svg "Docker"
+[docker-url]: https://registry.hub.docker.com/u/rentabiliweb/ci "Docker"
