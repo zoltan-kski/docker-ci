@@ -1,3 +1,0 @@
-test:
-  override:
-    - bash -c 'echo OK'
