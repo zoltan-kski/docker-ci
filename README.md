@@ -28,7 +28,7 @@ version is 5.4 from [Dotdeb](https://www.dotdeb.org/).
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/ci \
+	 dalenys/ci \
 	 bash -c 'php-choose-version 5.5 && cd /path/to/bind/in/container && PHPUNIT STUFF'
 ```
 
@@ -38,7 +38,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/ci \
+	 dalenys/ci \
 	 bash -c 'cd /path/to/bind/in/container && NODE.JS STUFF'
 ```
 
@@ -48,7 +48,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/ci \
+	 dalenys/ci \
 	 bash -c 'cd /path/to/bind/in/container && NPM STUFF'
 ```
 
@@ -58,7 +58,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/ci \
+	 dalenys/ci \
 	 bash -c 'cd /path/to/bind/in/container && BOWER STUFF'
 ```
 
@@ -68,7 +68,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/ci \
+	 dalenys/ci \
 	 bash -c 'cd /path/to/bind/in/container && GRUNT STUFF'
 ```
 
@@ -78,7 +78,7 @@ $ docker run \
 $ docker run \
   	 --rm \
   	 -v /path/to/bind/from/host:/path/to/bind/in/container:rw \
-	 rentabiliweb/ci \
+	 dalenys/ci \
 	 bash -c 'cd /path/to/bind/in/container && GULP STUFF'
 ```
 
@@ -97,5 +97,5 @@ Feel free to contribute on GitHub.
 ```
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg "License"
-[docker-img]: https://img.shields.io/docker/pulls/rentabiliweb/ci.svg "Docker"
-[docker-url]: https://registry.hub.docker.com/u/rentabiliweb/ci "Docker"
+[docker-img]: https://img.shields.io/docker/pulls/dalenys/ci.svg
+[docker-url]: https://registry.hub.docker.com/u/dalenys/ci
