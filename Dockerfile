@@ -35,15 +35,12 @@ RUN apt-get update && \
       ruby1.9.1 \
       ruby1.9.1-dev
 
-# get phpunit (http://phpunit.de/)
-RUN curl -Ls -o /usr/local/bin/phpunit.phar https://phar.phpunit.de/phpunit.phar && \
-    chmod 755 /usr/local/bin/phpunit.phar && \
-    ln -s /usr/local/bin/phpunit.phar /usr/local/bin/phpunit
-
-# get node.js (http://nodejs.org/)
-RUN curl -Ls https://deb.nodesource.com/setup_0.12 | bash && \
+# get node.js (https://nodejs.org/)
+RUN curl -Ls https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/nodejs-keyring.gpg add - && \
+    echo 'deb https://deb.nodesource.com/node_0.12 wheezy main' > /etc/apt/sources.list.d/nodejs.list && \
     apt-get update && \
-    apt-get install -y nodejs
+    apt-get install -y \
+      nodejs rlwrap
 
 # get npm (http://www.npmjs.com/)
 RUN curl -Ls curl https://www.npmjs.org/install.sh | bash
