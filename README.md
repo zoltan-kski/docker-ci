@@ -96,6 +96,6 @@ Feel free to contribute on GitHub.
    ╚═(███)═╝
 ```
 
-[license-img]: https://img.shields.io/badge/license-ISC-blue.svg "License"
+[license-img]: https://img.shields.io/badge/license-ISC-blue.svg
 [docker-img]: https://img.shields.io/docker/pulls/dalenys/ci.svg
 [docker-url]: https://registry.hub.docker.com/u/dalenys/ci
