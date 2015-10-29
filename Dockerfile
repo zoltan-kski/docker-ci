@@ -55,7 +55,7 @@ RUN npm install -g grunt-cli
 RUN npm install -g gulp
 
 # get jekyll (http://jekyllrb.com/)
-RUN gem install jekyll
+RUN gem install jekyll -v 2.5.3
 
 # pip (https://pypi.python.org/pypi/pip)
 RUN pip install --upgrade pip
