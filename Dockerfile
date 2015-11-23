@@ -37,13 +37,10 @@ RUN apt-get update && \
 
 # get node.js (https://nodejs.org/)
 RUN curl -Ls https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/nodejs-keyring.gpg add - && \
-    echo 'deb https://deb.nodesource.com/node_0.12 wheezy main' > /etc/apt/sources.list.d/nodejs.list && \
+    echo 'deb https://deb.nodesource.com/node_5.x wheezy main' > /etc/apt/sources.list.d/nodejs.list && \
     apt-get update && \
     apt-get install -y \
       nodejs rlwrap
-
-# get npm (http://www.npmjs.com/)
-RUN curl -Ls curl https://www.npmjs.org/install.sh | bash
 
 # get bower (http://bower.io/)
 RUN npm install -g bower
