@@ -1,4 +1,4 @@
-# Copyright (c) 2015, Dalenys
+# Copyright (c) 2016, Dalenys
 #
 # Permission  to use,  copy, modify,  and/or  distribute this  software for  any
 # purpose  with  or without  fee  is hereby  granted,  provided  that the  above
@@ -58,10 +58,5 @@ RUN gem install jekyll -v 2.5.3
 RUN pip install --upgrade pip
 
 # clean
-RUN find /usr/share/doc     -type f ! -name copyright -delete && \
-    find /usr/share/i18n    -type f -delete && \
-    find /usr/share/locale  -type f -delete && \
-    find /usr/share/man     -type f -delete && \
-    find /var/cache/apt     -type f -delete && \
-    find /var/lib/apt/lists -type f -delete
+RUN apt-clean
 # EOF
