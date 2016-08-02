@@ -35,15 +35,18 @@ RUN apt-get update && \
       python-dev \
       python-setuptools \
       python-virtualenv \
-      ruby1.9.1 \
-      ruby1.9.1-dev
+      ruby \
+      ruby-dev
 
 # get node.js (https://nodejs.org/)
 RUN curl -Ls https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/nodejs-keyring.gpg add - && \
-    echo 'deb https://deb.nodesource.com/node_5.x wheezy main' > /etc/apt/sources.list.d/nodejs.list && \
+    echo 'deb https://deb.nodesource.com/node_4.x jessie main' > /etc/apt/sources.list.d/nodejs.list && \
     apt-get update && \
     apt-get install -y \
       nodejs rlwrap
+
+# add symlink for backward compatibility (and npm)
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # get bower (http://bower.io/)
 RUN npm install -g bower
@@ -52,10 +55,10 @@ RUN npm install -g bower
 RUN npm install -g grunt-cli
 
 # get gulp (http://gulpjs.com/)
-RUN npm install -g gulp
+RUN npm install -g gulp-cli
 
 # get jekyll (http://jekyllrb.com/)
-RUN gem install jekyll -v 2.5.3
+# RUN gem install jekyll -v 2.5.3
 
 # pip (https://pypi.python.org/pypi/pip)
 RUN pip install --upgrade pip
