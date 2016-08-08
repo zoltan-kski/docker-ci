@@ -12,14 +12,14 @@
 # OTHER  TORTIOUS ACTION,  ARISING  OUT OF  OR  IN CONNECTION  WITH  THE USE  OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-FROM dalenys/php
+FROM dalenys/debian:jessie
 MAINTAINER Dalenys
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
+RUN apt-get update -qq && \
+    apt-get upgrade -qq -y && \
+    apt-get install -qq -y \
       build-essential \
       libffi-dev \
       libgraphviz-dev \
@@ -41,12 +41,9 @@ RUN apt-get update && \
 # get node.js (https://nodejs.org/)
 RUN curl -Ls https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/nodejs-keyring.gpg add - && \
     echo 'deb https://deb.nodesource.com/node_4.x jessie main' > /etc/apt/sources.list.d/nodejs.list && \
-    apt-get update && \
-    apt-get install -y \
+    apt-get update -qq && \
+    apt-get install -qq -y \
       nodejs rlwrap
-
-# add symlink for backward compatibility (and npm)
-RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # get bower (http://bower.io/)
 RUN npm install -g bower
@@ -58,7 +55,7 @@ RUN npm install -g grunt-cli
 RUN npm install -g gulp-cli
 
 # get jekyll (http://jekyllrb.com/)
-# RUN gem install jekyll -v 2.5.3
+RUN gem install jekyll
 
 # pip (https://pypi.python.org/pypi/pip)
 RUN pip install --upgrade pip
