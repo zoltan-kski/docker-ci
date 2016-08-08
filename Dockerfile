@@ -12,7 +12,7 @@
 # OTHER  TORTIOUS ACTION,  ARISING  OUT OF  OR  IN CONNECTION  WITH  THE USE  OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-FROM dalenys/debian:jessie
+FROM dalenys/debian:wheezy
 MAINTAINER Dalenys
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -37,25 +37,6 @@ RUN apt-get update -qq && \
       python-virtualenv \
       ruby \
       ruby-dev
-
-# get node.js (https://nodejs.org/)
-RUN curl -Ls https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/nodejs-keyring.gpg add - && \
-    echo 'deb https://deb.nodesource.com/node_4.x jessie main' > /etc/apt/sources.list.d/nodejs.list && \
-    apt-get update -qq && \
-    apt-get install -qq -y \
-      nodejs rlwrap
-
-# get bower (http://bower.io/)
-RUN npm install -g bower
-
-# get grunt (http://gruntjs.com/)
-RUN npm install -g grunt-cli
-
-# get gulp (http://gulpjs.com/)
-RUN npm install -g gulp-cli
-
-# get jekyll (http://jekyllrb.com/)
-RUN gem install jekyll
 
 # pip (https://pypi.python.org/pypi/pip)
 RUN pip install --upgrade pip
